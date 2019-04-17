@@ -39,14 +39,13 @@ class MainActivity : AppCompatActivity() {
 //                Log.d("Allef", msg)
 //                Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
 //            })
-        val t = this.application as App
-        val tra = t.getDefaultTracker()
-        tra?.setScreenName("Tela de Main")
-        tra?.send(HitBuilders.ScreenViewBuilder().build())
+//        val t = this.application as App
+//        val tra = t.getDefaultTracker()
+//        tra?.setScreenName("Tela de Main")
+//        tra?.send(HitBuilders.ScreenViewBuilder().build())
 
-        val database = FirebaseDatabase.getInstance()
-        val uid = UUID.randomUUID().toString()
-         myRef2 = database.reference.child("Cidades")
+////        val uid = UUID.randomUUID().toString()
+
 
         newcity.setOnClickListener {
             startActivity<NewProductActivity>()
@@ -69,17 +68,24 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        val database = FirebaseDatabase.getInstance()
+        myRef2 = database.reference.child("Cidades")
 
+
+        //lendo os dados
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+
                 names.clear()
                 for ( c in dataSnapshot.children){
                     val post = c.getValue(IndicationCity::class.java)
                     post?.cityName?.let { namesCityes.add(it) }
-                    post?.let { names.add(it) }
                     Log.v("Allef", "Nome da cidade ="+ post?.cityName)
+                    post?.let { names.add(it) }
+
                 }
-                val adapterListName = names.map { it.cityName }
+
+                val adapterListName = names.map{ it.cityName }
                 adapter = ArrayAdapter(this@MainActivity,android.R.layout.simple_list_item_1,adapterListName)
                 ll.adapter = adapter
             }

@@ -21,7 +21,9 @@ class NewProductActivity : AppCompatActivity() {
 
         floatingSaveCity.setOnClickListener {
             if(!edtCity.text?.isEmpty()!!){
+
                 val uid = UUID.randomUUID().toString()
+
                 val ci = IndicationCity(uid,edtCity.text.toString())
                 val databaseReference:DatabaseReference = database.reference.child("Cidades")
                 databaseReference.child(uid).setValue(ci)
