@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "851462809248",
+    "firebase_url": "https://marketplaceoffersbr.firebaseio.com",
+    "project_id": "marketplaceoffersbr",
+    "storage_bucket": "marketplaceoffersbr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851462809248:android:9da3ecbef7d3ddf1",
+        "android_client_info": {
+          "package_name": "com.allef.developer.marketplaceoffers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851462809248-v8gl2m1jk5vmielr3tilcnn1oj2c8g11.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.allef.developer.marketplaceoffers",
+            "certificate_hash": "f991b7de4cced6546998495f9fbcea61b3750034"
+          }
+        },
+        {
+          "client_id": "851462809248-q72edgsqfs782p7ragnigdphbs8u5a87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7d1zKSS5TFymlDiALfi14wd3SZgiaP2o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851462809248-q72edgsqfs782p7ragnigdphbs8u5a87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
