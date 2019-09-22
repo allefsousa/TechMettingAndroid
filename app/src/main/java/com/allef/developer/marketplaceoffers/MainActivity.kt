@@ -79,8 +79,6 @@ class MainActivity : AppCompatActivity() {
                 names.clear()
                 for ( c in dataSnapshot.children){
                     val post = c.getValue(IndicationCity::class.java)
-                    post?.cityName?.let { namesCityes.add(it) }
-                    Log.v("Allef", "Nome da cidade ="+ post?.cityName)
                     post?.let { names.add(it) }
 
                 }
